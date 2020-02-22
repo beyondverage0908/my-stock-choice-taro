@@ -1,0 +1,37 @@
+@import '../../common/less/define.less';
+
+@font-size30: 30px;
+
+.filter-item-wrap {
+  .title {
+    margin-top: 30px;
+    margin-left: 28px;
+    font-size: @font-size30;
+    font-weight: 700;
+  }
+  .stock-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 10px;
+    margin-top: 20px;
+    .stock {
+      flex: 1;
+      width: 202px;
+      padding: 10px 5px;
+      margin: 0 10px;
+      color: @main-gray-deep;
+      text-align: center;
+      background-color: #f1efef;
+      border-radius: 10px;
+    }
+    .stock-blank {
+      background-color: transparent;
+    }
+    .stock-select {
+      color: #fff;
+      background-color: @theme-color-blue-shadow;
+      // border: solid 1px @theme-color-blue;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@font-size28: 28px;
+@font-size30: 30px;
+@font-size32: 32px;
+@font-size36: 36px;
+
+@main-black: #000;
+@main-gray: #cfcfcf;
+@main-gray-deep: #676767;
+@main-red: #f00;
+@main-red-shadow: #ffb5b5;
+@main-blue: #5291f5;
+@main-green: #00a600;
+@table-header-bg-color: #f0f0f0; 
+@border: solid @main-gray 1px;
+.stock-table-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  .table {
+    margin: 0 0px;
+    .tr {
+      display: flex;
+      .th {
+        flex: 1;
+        padding: 10px 5px;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        background: @table-header-bg-color;
+        border-top: @border;
+        border-right: @border;
+      }
+      .border-left {
+        border-left: @border;
+      }
+      .border-bottom {
+        border-bottom: @border;
+      }
+      .td {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        padding: 10px 5px;
+        color: @main-gray-deep;
+        font-size: 28px;
+        font-weight: 500;
+        text-align: center;
+        border-top: @border;
+        border-right: @border;
+        .tread {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 80%;
+          .img {
+            width: 22px;
+            height: 22px;
+          }
+        }
+        .gray {
+          color: @main-gray;
+        }
+        .red {
+          color: @main-red;
+        }
+      }
+    }
+    .no-data {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      color: @main-blue;
+      border-right: solid @main-gray 1px;
+      border-bottom: solid @main-gray 1px;
+      border-left: solid @main-gray 1px;
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .img-qrcode {
+      width: 200px;
+      height: 200px;
+    }
+    .desc {
+      margin-left: 25px;
+      .title {
+        color: @main-gray-deep;
+        font-size: @font-size30;
+        .fixed {
+          color: @main-red;
+          font-size: @font-size32;
+          font-weight: 700;
+        }
+      }
+      .subtitle {
+        color: @main-gray-deep;
+        font-size: @font-size30;
+      }
+    }
+  }
+}

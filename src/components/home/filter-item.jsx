@@ -11,12 +11,10 @@ class FilterItem extends Component {
     this.state = {
       filterData: []
     }
+    this.dealFilterItem = props.dealFilterItem
+    this.type = props.type
+    this.multiple = props.multiple
     this.dealDataSource(props.dataSource)
-  }
-
-  static defaultProps = {
-    multiple: false,
-    type: ''
   }
 
   dealDataSource(dataSourceList) {
@@ -43,7 +41,7 @@ class FilterItem extends Component {
     }
   }
   handleStockPick(item) {
-    if (this.props.multiple) {
+    if (this.multiple) {
       if (item.pick) {
         item.pick = false
         const fIndex = this.pickList.findIndex(f => f.value === item.value)
@@ -92,16 +90,17 @@ class FilterItem extends Component {
         filterData: filterData
       })
     }
-    if (this.props.dealFilterItem) {
-      this.props.dealFilterItem(this.props.type, this.pickList)
+    if (this.dealFilterItem) {
+      this.dealFilterItem(this.type, this.pickList)
     }
   }
 
   render() {
+    const { filterData } = this.state
     return (
       <View className="filter-item-wrap">
         <View className="title">{this.props.title}</View>
-        {this.state.filterData.map((arr, index) => {
+        {filterData.map((arr, index) => {
           return (
             <View className="stock-group" key={index}>
               {arr.map(data => {

@@ -5,7 +5,7 @@ function withShare(opts = {}) {
   // 设置默认
   const defaultPath = '/pages/home/index?';
 
-  return function demoComponent(Component) {      
+  return function demoComponent(Component) {
     // redux里面的用户数据
     class WithShare extends Component {
       async componentWillMount() {
